@@ -6,19 +6,25 @@ Feel free to implement this in your own website!
 To do so you would first want to define the colors you are using in each theme. You may need to add/remove color variables as you see fit. These are located at the top of style.css
 
 ```css
+/*--------------------Reusable Variables--------------------*/
 :root {
-    /*--------------------Light Theme (Default)--------------------*/
+    /*--------------------Light Theme Variables (Default)--------------------*/
     --light-theme-background-color: #eee;
     --light-theme-darker-background-color: #ccc;
     --light-theme-text-color: #333;
     --light-theme-link-color: #ff6347;
     --light-theme-link-hover-color: #fa2600;
-    /*--------------------Dark Theme-------------------- */ 
+
+    /*--------------------Dark Theme Variables--------------------*/ 
     --dark-theme-background-color: #333;
     --dark-theme-darker-background-color: #111;
     --dark-theme-text-color: #eee;
     --dark-theme-link-color: #00fa9a;
     --dark-theme-link-hover-color: #00955b; 
+
+    /*--------------------Other Variables--------------------*/ 
+    --link-hover-timing: all 0.25s ease-in-out;
+    --theme-change-timing: all 1s ease-in-out;
 }
 ```
 
