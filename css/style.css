@@ -1,100 +1,25 @@
-* {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.5;
-}
-
+/*--------------------Reusable Variables--------------------*/
 :root {
-    /*--------------------Light Theme (Default)--------------------*/
+    /*--------------------Light Theme Variables (Default)--------------------*/
     --light-theme-background-color: #eee;
     --light-theme-darker-background-color: #ccc;
     --light-theme-text-color: #333;
     --light-theme-link-color: #ff6347;
     --light-theme-link-hover-color: #fa2600;
-    /*--------------------Dark Theme-------------------- */ 
+
+    /*--------------------Dark Theme Variables--------------------*/ 
     --dark-theme-background-color: #333;
     --dark-theme-darker-background-color: #111;
     --dark-theme-text-color: #eee;
     --dark-theme-link-color: #00fa9a;
     --dark-theme-link-hover-color: #00955b; 
+
+    /*--------------------Other Variables--------------------*/ 
+    --link-hover-timing: all 0.25s ease-in-out;
+    --theme-change-timing: all 1s ease-in-out;
 }
 
-.btn {
-    background: none;
-    border: none;
-    font-size: 1.15rem;
-}
-
-.btn-light {
-    background: var(--light-theme-link-color);
-    color: var(--light-theme-background-color);
-    cursor: pointer;
-    padding: 10px;
-}
-
-.btn-dark {
-    background: var(--dark-theme-link-color);
-    color: var(--dark-theme-background-color);
-    cursor: pointer;
-    padding: 10px;
-}
-
-/*--------------------Light Theme Class (Default)--------------------*/
-.light {
-    background: var(--light-theme-background-color);
-    color: var(--light-theme-text-color);
-    transition: all 1s ease;
-}
-
-.light a {
-    color: var(--light-theme-link-color);
-    transition: all 1s ease;
-}
-
-.light a:hover {
-    color: var(--light-theme-link-hover-color);
-    transition: all 0.5s ease;
-}
-
-.footer-light {
-    background: var(--light-theme-darker-background-color);
-}
-
-/*--------------------Dark Theme Class-------------------- */
-.dark {
-    background: var(--dark-theme-background-color);
-    color: var(--dark-theme-text-color);
-    transition: all 1s ease;
-}
-
-.dark a {
-    color: var(--dark-theme-link-color);
-    transition: all 1s ease;
-}
-
-.dark a:hover {
-    color: var(--dark-theme-link-hover-color);
-    transition: all 0.5s ease;
-}
-
-.footer-dark {
-    background: var(--dark-theme-darker-background-color);
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    text-align: center;
-}
-
+/*--------------------Font Sizing--------------------*/
 h1, h2 {    
     font-family: 'Carter One', cursive;
 }
@@ -115,6 +40,94 @@ h4 {
     font-size: 1.25rem;
 }
 
+/*--------------------Universal Styles--------------------*/ 
+* {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+a {    
+    transition: var(--link-hover-timing);
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-light {
+    background: var(--light-theme-link-color);
+    color: var(--light-theme-background-color);
+}
+
+.btn-light:hover {
+    background: var(--light-theme-link-hover-color);
+}
+
+.btn-dark {
+    background: var(--dark-theme-link-color);
+    color: var(--dark-theme-background-color);
+}
+
+.btn-dark:hover {
+    background: var(--dark-theme-link-hover-color);
+    color: var(--dark-theme-text-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+/*--------------------Light Theme Styles (Default)--------------------*/
+.light {
+    background: var(--light-theme-background-color);
+    color: var(--light-theme-text-color);
+    transition: var(--theme-change-timing);
+}
+
+.light a {
+    color: var(--light-theme-link-color);
+}
+
+.light a:hover {
+    color: var(--light-theme-link-hover-color);
+}
+
+.footer-light {
+    background: var(--light-theme-darker-background-color);
+}
+
+/*--------------------Dark Theme Styles--------------------*/
+.dark {
+    background: var(--dark-theme-background-color);
+    color: var(--dark-theme-text-color);
+    transition: var(--theme-change-timing);
+}
+
+.dark a {
+    color: var(--dark-theme-link-color);
+}
+
+.dark a:hover {
+    color: var(--dark-theme-link-hover-color);
+}
+
+.footer-dark {
+    background: var(--dark-theme-darker-background-color);
+}
+
+/*--------------------Body Styles--------------------*/
+.header {
+    text-align: center;
+}
+
 .header h3 {
     margin-bottom: 50px;
 }
@@ -123,7 +136,7 @@ h4 {
     flex: 1 0 auto;
 }
 
-main {
+.main-content {
     margin: 100px auto 50px auto;
     width: 95%;
 }
@@ -144,6 +157,7 @@ main {
     width: 100%;
 }
 
+/*--------------------Media Queries--------------------*/
 @media (min-width: 768px) {
     main {
         width: 80%;
