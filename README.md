@@ -1,4 +1,4 @@
-# Theme Toggle
+# ezToggle
  <h3>An isolated dark theme toggle using CSS & JavaScript</h3>
 
 Feel free to implement this in your own website! 
