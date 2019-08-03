@@ -154,7 +154,7 @@ body {
     align-items: center;
     flex-shrink: 0;
     text-align: center;
-    --theme-change-timing: all 1s ease-in-out;
+    transition: --theme-change-timing: all 1s ease-in-out;
     width: 100%;
 }
 
