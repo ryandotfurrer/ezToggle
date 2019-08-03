@@ -125,7 +125,7 @@ h4 {
 
 main {
     margin: 100px auto 50px auto;
-    width: 60%;
+    width: 95%;
 }
 
 .sample-1,
@@ -142,4 +142,10 @@ main {
     flex-shrink: 0;
     text-align: center;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 80%;
+    }
 }
