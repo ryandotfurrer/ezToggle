@@ -161,6 +161,6 @@ body {
 /*--------------------Media Queries--------------------*/
 @media (min-width: 768px) {
     main {
-        width: 80%;
+        width: 65%;
     }
 }
